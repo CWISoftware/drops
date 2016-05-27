@@ -1,16 +1,6 @@
-{% comment %}
-  shows author's gravatar image, if present
-  params:
-    author - object
-    size - number
-{% endcomment %}
-
 {% comment %} ASSIGN AUTHOR {% endcomment %}
 {% assign username = include.username %}
 {% assign author = site.data.authors[username][username] %}
-{% if author == nil %}
-  {% assign author = site.data.authors[site.author][site.author] %}
-{% endif %}
 
 {% comment %} ASSIGN VARIABLE {% endcomment %}
 {% assign gravatar_url = site.data.resources.gravatar %}

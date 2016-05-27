@@ -1,18 +1,6 @@
-{% comment %}
-  shows author's links
-  params:
-    username - string
-
-  `links` is the only component that needs `username` instead of `author`,
-  because we must link to the `author` page via `username`
-{% endcomment %}
-
 {% comment %} ASSIGN AUTHOR {% endcomment %}
 {% assign username = include.username %}
 {% assign author = site.data.authors[username][username] %}
-{% if author == nil %}
-  {% assign author = site.data.authors[site.author][site.author] %}
-{% endif %}
 
 {% comment %} ASSIGN VARIABLE {% endcomment %}
 {% assign name = author.name | escape %}

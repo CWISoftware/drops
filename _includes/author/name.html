@@ -1,15 +1,6 @@
-{% comment %}
-  shows author's real name
-  params:
-    author - object
-{% endcomment %}
-
 {% comment %} ASSIGN AUTHOR {% endcomment %}
 {% assign username = include.username %}
 {% assign author = site.data.authors[username][username] %}
-{% if author == nil %}
-  {% assign author = site.data.authors[site.author][site.author] %}
-{% endif %}
 
 {% comment %} ASSIGN VARIABLE {% endcomment %}
 {% assign name = author.name | escape %}
