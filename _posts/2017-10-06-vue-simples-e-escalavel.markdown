@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2017-10-06T16:44:43-03:00
-title: "Introdução ao Vuejs"
+title: "Vue.js: simples e escalável"
 author: victorcomette
 abstract: "Uma visão sobre a aplicação em projetos."
 ---
