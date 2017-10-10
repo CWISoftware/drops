@@ -6,7 +6,7 @@ author: victorcomette
 abstract: "Uma visão sobre a aplicação do framework em projetos."
 ---
 
-**Vue** é um framework para JavaScript revolucionário que com certeza irá resolver TODOS os seus problemas!!! Não convence não é mesmo?! A verdade é que, em meio a um oceano de frameworks, determinar o "melhor" para uma finalidade é quase sempre um erro. Cada biblioteca traz suas próprias vantagens e desvantagem, cabendo à equipe pesquisar e definir qual utilizar em seus projetos. Nesse post, abordarei um pouco sobre minha visão ~~tendenciosa~~ dos pontos em que o Vue se destaca, os benefícios que vejo na sua aplicação em projetos e as diferenças em relação aos seus principais concorrentes: o *Angular* e *React*.
+**Vue é um framework para JavaScript revolucionário que com certeza irá resolver TODOS os seus problemas!!!** Não convence não é mesmo?! A verdade é que, em meio a um oceano de frameworks, determinar o "melhor" para uma finalidade é quase sempre um erro. Cada biblioteca traz suas próprias vantagens e desvantagem, cabendo à equipe pesquisar e definir qual utilizar em seus projetos. Nesse post, abordarei um pouco sobre minha visão ~~tendenciosa~~ dos pontos em que o Vue se destaca, os benefícios que vejo na sua aplicação em projetos e as diferenças em relação aos seus principais concorrentes: o *Angular* e *React*.
 
    
 
