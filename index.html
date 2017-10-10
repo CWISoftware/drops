@@ -14,13 +14,21 @@ layout: default
 
         <p>{{ post.abstract }}</p>
 
-        <div class="user-profile user-profile-home">
-          <div class="user-profile-image">
-            {% include author/avatar.html username=username size=60 %}
+        <div class="author">
+
+          <div class="author__profile">
+            <div class="author__image">
+              {% include author/avatar.html username=username size=60 %}
+            </div>
+            <div class="author__name">
+              <a rel="author" itemprop="author" href="{{ site.baseurl }}/autores/{{ username }}">{% include author/name.html username=username %}</a>
+
+              <div class="author__social">
+                  <span class="post-meta">{% include post/date.html date=post.date %}</span>
+              </div>
+            </div>
           </div>
-          <h4 class="user-name">
-            {% include author/name.html username=username %} - <span class="post-meta">{% include post/date.html date=post.date %}</span>
-          </h4>
+
         </div>
 
       </li>

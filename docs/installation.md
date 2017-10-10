@@ -40,17 +40,33 @@ Acesse [http://localhost:4000/drops/](http://localhost:4000/drops/)
 
 ### Instalação
 
-```
 Executar MSI Installer marcando a opção de adicionar variável de ambiente.
 Extrair DevKit na pasta raiz onde foi instalado o Ruby. (Ex.: C:\Ruby e C:\DevKit)
 Via CMD, navegar até a pasta de instalação do DevKit:
 
+```
 ruby dk.rb init
 ruby dk.rb install
+```
 
-Seguir passos do ambiente local (pode ser necessário executar o prompt como administrador)
+Instale o bundler:
+
+    gem install bundler
+
+*Caso tenha erro de certificado no comando anterior adicione a seguinte fonte no rubygems `gem sources -a http://rubygems.org`*
+
+Clonando o projeto e instalando dependências:
 
 ```
+git clone https://github.com/CWISoftware/drops.git && cd drops
+bundle install
+```
+
+*Caso tenha erro de certificado ao rodar `bundle install` modifique o arquivo `Gemfile` para utilizar a source HTTP ao invés de HTTPS (ou seja, apenas remova o "S", salve o arquivo e rode o comando novamente).*
+
+### Rodando o projeto
+
+    jekyll s
 
 ## Instalando com Vagrant
 
@@ -72,7 +88,6 @@ vagrant up
 vagrant ssh
 cd /vagrant && ./scripts/run_guest.sh
 ```
-
 Acesse [http://localhost:4000/drops/](http://localhost:4000/drops/)
 
 ## Instalando com Docker

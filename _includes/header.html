@@ -1,15 +1,28 @@
 <header class="site-header">
 
-  <a class="site-title-header" href="{{ site.baseurl }}/" title="Retornar à home"></a>
+  <!-- <a class="site-title-header" href="{{ site.baseurl }}/" title="Retornar à home"></a> -->
 
-  <div class="wrapper header-navigation">
-    <nav class="site-nav">
-      <div class="trigger">
-        <a class="page-link" href="{{ '/autores' | prepend: site.baseurl }}">Autores</a>
-        <a class="page-link" href="{{ 'https://github.com/CWISoftware' | append: site.baseurl }}" target="_blank">Github</a>
+  <div class="header-navigation">
+    <div class="container">
+        <nav class="site-nav">
+          <div class="trigger">
+            <a class="page-link" href="{{ site.baseurl }}/">Home</a>
+            <a class="page-link" href="{{ '/autores' | prepend: site.baseurl }}">Autores</a>
+            <a class="page-link" href="{{ 'https://github.com/CWISoftware' | append: site.baseurl }}" target="_blank">Github</a>
+          </div>
+        </nav>
       </div>
-    </nav>
+  </div>
 
+  <div class="container">
+      <div class="page-welcome">
+        <div class="page-welcome__col">
+          <a class="drops-logo" href="{{ site.baseurl }}/" title="Retornar à home"></a>
+        </div>
+        <div class="page-welcome__col page-welcome__col--text">
+          <p>o <strong>Drops</strong> é uma iniciativa dos colaboradores da CWI Software em compartilhar suas vivências e desafios em conjunto com as novas tecnologias e tendências de mercado no mundo de TI. </p>
+        </div>
+      </div>
   </div>
 
 </header>

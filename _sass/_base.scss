@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 /**
  * Reset some basic elements
  */
@@ -144,6 +148,15 @@ pre {
         padding-left: 0;
     }
 }
+
+
+/**
+ * Bold
+ */
+ b,
+ strong, {
+  font-family: $bold;
+ }
 
 
 

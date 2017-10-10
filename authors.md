@@ -1,5 +1,5 @@
 ---
 layout: authors
-title: Autores
+title: Colaboradores
 permalink: /autores/
 ---

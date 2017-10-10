@@ -1,12 +1,31 @@
+@import "colors";
+
 /**
  * Site header
  */
+
+.logo-header {
+  padding: 20px 0;
+}
+
+.drops-logo {
+  width: 284px;
+  height: 117px;
+  background-image: url("../img/drops.png");
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .site-header {
-    height: 180px;
-    border-top: 3px solid $brand-color;
     // Positioning context for the mobile navigation icon
     position: relative;
-    background: url('../img/drops.png') no-repeat center;
+    background: rgba(0,0,0,0.03);
+    padding: 0 0 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .site-title-header {
@@ -32,8 +51,12 @@
   }
 }
 
-.header-navigation .site-nav .page-link {
-  font-size: 14px;
+.header-navigation {
+  @extend %clearfix;
+
+  .site-nav .page-link {
+    color: rgba(0,0,0,0.5);
+  }
 }
 
 .site-title {
@@ -52,7 +75,7 @@
 
 .site-nav {
     float: right;
-    line-height: 56px;
+    line-height: 42px;
 
     .menu-icon {
         display: none;
@@ -61,6 +84,7 @@
     .page-link {
         color: $text-color;
         line-height: $base-line-height;
+        font-size: 14px;
 
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
@@ -124,7 +148,6 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid darken($grey-color-light, 5%);
     padding: $spacing-unit 0;
 }
 
@@ -220,7 +243,10 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 32px;
+    font-family: $bold;
+    line-height: 42px;
+    color: $secondary-color;
 }
 
 
@@ -338,4 +364,176 @@ h1 .post-link {
 .home p,
 em {
   font-style: italic;
+}
+
+.site-dark {
+  background-color: #34373e;
+
+  .page-welcome {
+
+    p {
+      color: #ddd;
+    }
+  }
+
+  .drops-logo {
+    background-image: url("../img/drops-w.png");
+  }
+
+  .header-navigation {
+    @extend %clearfix;
+    background-color: rgba(0,0,0,0.2);
+
+    .page-link {
+      color: rgba(255,255,255,0.5);
+    }
+  }
+
+  .page-title {
+    font-size: 22px;
+    color: $brand-color;
+  }
+
+  .authors-list {
+    @extend %clearfix;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .author {
+      width: 33%;
+      float: left;
+    }
+  }
+
+  .site-header {
+    border-color: transparent;
+    background: transparent;
+  }
+
+  .author .author__name {
+
+    > a {
+      display: block;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #ddd;
+    }
+  }
+
+  .author {
+    padding: 15px 20px;
+
+    .author__social {
+
+      > a {
+        color: rgba(255,255,255,0.4);
+        border-right: 1px dotted rgba(255,255,255,0.2);
+      }
+
+      .icon > svg {
+
+        path {
+          fill: rgba(255,255,255,0.4);
+        }
+      }
+    }
+  }
+}
+
+
+.author {
+  position: relative;
+
+  .author__image {
+    width: 42px;
+
+    > img {
+      display: block;
+      width: 42px;
+      height: 42px;
+      border-radius: 50em;
+      overflow: hidden;
+    }
+  }
+
+  .author__name {
+    padding-left: 10px;
+    font-size: 16px;
+
+    > a {
+      color: #555;
+
+      &:hover {
+        color: #f8b234;
+        opacity: 1;
+      }
+    }
+  }
+
+  .author__social {
+    font-size: 11px;
+    overflow: hidden;
+    line-height: 18px;
+
+    > a {
+      padding-right: 5px;
+      margin-right: 5px;
+      color: rgba(0,0,0,0.4);
+      border-right: 1px dotted rgba(0,0,0,0.2);
+
+      &:last-child {
+        border: 0;
+      }
+    }
+
+    .icon > svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+
+      path {
+        fill: rgba(0,0,0,0.4);
+      }
+    }
+  }
+
+  .author__profile {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.page-welcome {
+  display: table;
+  margin: 20px 0;
+  width: 100%;
+
+  .page-welcome__col {
+    display: table-cell;
+    vertical-align: middle;
+
+    &.page-welcome__col--text {
+      padding-left: 20px;
+    }
+  }
+
+  p {
+    padding: 20px;
+    color: rgba(0,0,0,0.5);
+  }
+}
+
+
+.container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
 }

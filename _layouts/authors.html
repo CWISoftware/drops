@@ -1,23 +1,45 @@
----
-layout: page
----
-<ul class="post-list">
-  {% for a in site.data.authors %}
-    <li>
-      {% assign username = a[0] %}
+<!DOCTYPE html>
+<html>
 
-      <h3>
-        <a rel="author" itemprop="author" href="{{ site.baseurl }}/autores/{{ username }}">
-          {% include author/name.html username=username %}
-        </a>
-      </h3>
+  {% include head.html %}
 
-      <div class="user-profile">
-        <div class="user-profile-image">
-          {% include author/avatar.html username=username size=60 %}
+  <body class="site-dark">
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="container">
+
+        <h1 class="page-title">{{ page.title }}</h1>
+
+        <div class="authors-list">
+          {% for a in site.data.authors %}
+          <div class="author">
+
+            {% assign username = a[0] %}
+
+            <div class="author__profile">
+              <div class="author__image">
+                {% include author/avatar.html username=username size=60 %}
+              </div>
+              <div class="author__name">
+                <a rel="author" itemprop="author" href="{{ site.baseurl }}/autores/{{ username }}">{% include author/name.html username=username %}</a>
+
+                <div class="author__social">{% include author/links.html  username=username %}</div>
+              </div>
+            </div>
+
+          </div>
+          {% endfor %}
         </div>
-        <p class="user-name">{% include author/links.html  username=username %}</p>
+
       </div>
-    </li>
-  {% endfor %}
-</ul>
+    </div>
+
+    {% include footer.html %}
+    {% include gtm.html %}
+
+  </body>
+
+</html>
+
