@@ -4,8 +4,8 @@ Instalação
 Existem 2 formas de instalar o ambiente de desenvolvimento:
 
 1. usando seu ambiente local
-1. usando Vagrant 
-
+2. usando Vagrant 
+3. usando docker
 
 ## Instalando no seu ambiente local (Linux e OS X)
 
@@ -74,3 +74,16 @@ cd /vagrant && ./scripts/run_guest.sh
 ```
 
 Acesse [http://localhost:4000/drops/](http://localhost:4000/drops/)
+
+## Instalando com Docker
+
+### Dependências
+
+- [docker compose](https://docs.docker.com/compose/install/#install-compose)
+
+### Instalação
+
+```
+git clone https://github.com/CWISoftware/drops.git && cd drops
+docker-compose up
+```
