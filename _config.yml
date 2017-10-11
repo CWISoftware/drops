@@ -35,3 +35,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - Vagrantfile
+  - docker-compose.yml
