@@ -13,7 +13,7 @@ Demonstrarei nesse Drop a solução que utilizamos para atender ao Tribunal de J
 
 Vamos a um pouco de teoria.
 
-#### O que é assinatura digital
+### O que é assinatura digital
 Quando precisamos garantir a integridade e a legitimidade de algum documento, o que precisamos fazer é nos dirigirmos a algum tabelionato, ou cartório, para que um tabelião, dotado de fé pública, verifique nossos documentos, e por meio de selos e carimbos “reconheça firma”.
 
 No mundo digital, diversas são as necessidades que exigem também um reconhecimento de firma. Intrusões, violações de conformidade e ataques cibernéticos, ou a simples facilidade de manter um documento virtual – sem a necessidade de impressão, e o consequente problema de armazenamento, e a limitada distribuição – e mesmo assim com toda a comprovação que um arquivo físico pode ter.
@@ -25,7 +25,7 @@ A utilização da assinatura ou firma digital providencia a prova inegável de q
     - integridade: qualquer alteração da mensagem faz com que a assinatura não corresponda mais ao documento;
     - irretratabilidade ou não-repúdio: o emissor não pode negar a autenticidade da mensagem.
 
-#### O que é um certificado digital
+### O que é um certificado digital
 É um arquivo eletrônico que permite conhecer o titular da mensagem.
 
 Um certificado digital é emitido por uma entidade certificadora, que aqui faz o papel do tabelião, e vinculada a um cpf, ou cnpj. O portador do eCpf ou eCnpj, recebe um arquivo (A1), um token, ou um cartão (A3), e uma senha, que irá compor a chave privada.
@@ -36,14 +36,14 @@ Um certificado digital é emitido por uma entidade certificadora, que aqui faz o
   
 Existem outros tipos de certificado digital: Tipo S, para criptografar documentos, tipo T para certificar a data de assinatura, etc. Porém aqui no nosso caso, estamos tratando apenas dos certificados do tipo A, que garantem a assinatura digital.
 
-#### ICP Brasil
+### ICP Brasil
 Desde 2001, existe no Brasil a medida provisória nº 2.200-2, que regulamenta a assinatura digital. A Infraestrutura de Chaves Públicas Brasileira (ICP Brasil) que é um conjunto de tecnologias (técnicas, práticas e procedimentos) que garante às transações e aos documentos eletrônicos a segurança por meio do uso de um par de chaves.
 
 O que a MP portanto outorga à ICP-Brasil é a fé pública, considerando que qualquer documento digital assinado com o certificado emitido pela ICP-Brasil pode de fato ser considerado assinado pela própria pessoa.
 
 Ou seja, qualquer sistema de assinatura digital precisa seguir esta regra para ter validade jurídica no país.
 
-#### Demoiselle Signer
+### Demoiselle Signer
 Agora a parte boa, vamos à prática.
 
 <center>
@@ -195,10 +195,10 @@ Depois é só assinar:
 		return assinador.signer(conteudo);    	
     }
 
-#### Relacionados
-https://pt.wikipedia.org/wiki/Assinatura_digital
-http://blog.validcertificadora.com.br/?p=8378
-http://demoiselle.io/signer/index.html
-http://www.certisign.com.br
-https://www.evaltec.com.br
-https://cartorioonlinebrasil24h.com.br/blog/reconhecimento-de-firma-como-e-feito
+### Relacionados
+- https://pt.wikipedia.org/wiki/Assinatura_digital
+- http://blog.validcertificadora.com.br/?p=8378
+- http://demoiselle.io/signer/index.html
+- http://www.certisign.com.br
+- https://www.evaltec.com.br
+- https://cartorioonlinebrasil24h.com.br/blog/reconhecimento-de-firma-como-e-feito
